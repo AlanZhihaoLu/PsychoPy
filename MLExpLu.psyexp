@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2020.1.2">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="pix" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1280, 800]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[1,1,1]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="MLExpLu" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial"/>
+    <Routine name="instr">
+      <CodeComponent name="setup">
+        <Param name="Begin Experiment" updates="constant" val="import numpy as np&amp;#10;import random&amp;#10;&amp;#10;full_conditions = [&quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;,&amp;#10;&quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;uneqleftlongout&quot;, &quot;uneqrightlongout&quot;, &quot;uneqleftlongin&quot;, &quot;uneqrightlongin&quot;]&amp;#10;&amp;#10;practice_conditions = [&quot;eqleftout&quot;, &quot;eqrightout&quot;, &quot;uneqleftlongout&quot;, &quot;uneqrightlongout&quot;, &quot;uneqleftlongin&quot;, &quot;uneqrightlongin&quot;]&amp;#10;&amp;#10;random.shuffle(practice_conditions)&amp;#10;&amp;#10;full_conditions = np.repeat(full_conditions, 4)&amp;#10;random.shuffle(full_conditions)&amp;#10;&amp;#10;condition_values = { &amp;#10;    'eqleftout': {&amp;#10;        'change': 0,&amp;#10;        'leftout': 1&amp;#10;    },&amp;#10;    'eqrightout': {      &amp;#10;        'change': 0,&amp;#10;        'leftout': -1&amp;#10;    },&amp;#10;    'uneqleftlongout': {&amp;#10;        'change': 0.1,&amp;#10;        'leftout': 1&amp;#10;    },&amp;#10;    'uneqrightlongout': {&amp;#10;        'change': -0.1,&amp;#10;        'leftout': -1&amp;#10;    },&amp;#10;    'uneqleftlongin': {&amp;#10;        'change': 0.1,&amp;#10;        'leftout': -1&amp;#10;    },&amp;#10;    'uneqrightlongin': {&amp;#10;        'change': -0.1,&amp;#10;        'leftout': 1&amp;#10;    }&amp;#10;}&amp;#10;&amp;#10;horizDist = 100&amp;#10;&amp;#10;adaptsecs = 2&amp;#10;&amp;#10;targetsecs = 0.5&amp;#10;&amp;#10;FramestoWait = 2&amp;#10;&amp;#10;BufferSeconds = 0.1&amp;#10;&amp;#10;LineLength = [round(np.random.normal(loc = 400, scale = abs(400*0.05)))]&amp;#10;&amp;#10;for i in range(80-1):&amp;#10;    LineLength.append(round(np.random.normal(loc = 400, scale = abs(400*0.05))))" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as np from 'numpy';&amp;#10;import * as random from 'random';&amp;#10;var BufferSeconds, FramestoWait, LineLength, adaptsecs, condition_values, full_conditions, horizDist, practice_conditions, targetsecs;&amp;#10;full_conditions = [&quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqleftout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;eqrightout&quot;, &quot;uneqleftlongout&quot;, &quot;uneqrightlongout&quot;, &quot;uneqleftlongin&quot;, &quot;uneqrightlongin&quot;];&amp;#10;practice_conditions = [&quot;eqleftout&quot;, &quot;eqrightout&quot;, &quot;uneqleftlongout&quot;, &quot;uneqrightlongout&quot;, &quot;uneqleftlongin&quot;, &quot;uneqrightlongin&quot;];&amp;#10;random.shuffle(practice_conditions);&amp;#10;full_conditions = np.repeat(full_conditions, 4);&amp;#10;random.shuffle(full_conditions);&amp;#10;condition_values = {&quot;eqleftout&quot;: {&quot;change&quot;: 0, &quot;leftout&quot;: 1}, &quot;eqrightout&quot;: {&quot;change&quot;: 0, &quot;leftout&quot;: (- 1)}, &quot;uneqleftlongout&quot;: {&quot;change&quot;: 0.1, &quot;leftout&quot;: 1}, &quot;uneqrightlongout&quot;: {&quot;change&quot;: (- 0.1), &quot;leftout&quot;: (- 1)}, &quot;uneqleftlongin&quot;: {&quot;change&quot;: 0.1, &quot;leftout&quot;: (- 1)}, &quot;uneqrightlongin&quot;: {&quot;change&quot;: (- 0.1), &quot;leftout&quot;: 1}};&amp;#10;horizDist = 100;&amp;#10;adaptsecs = 2;&amp;#10;targetsecs = 0.5;&amp;#10;FramestoWait = 2;&amp;#10;BufferSeconds = 0.1;&amp;#10;LineLength = [Math.round(np.random.normal({&quot;loc&quot;: 400, &quot;scale&quot;: abs((400 * 0.05))}))];&amp;#10;for (var i = 0, _pj_a = (80 - 1); (i &lt; _pj_a); i += 1) {&amp;#10;    LineLength.append(Math.round(np.random.normal({&quot;loc&quot;: 400, &quot;scale&quot;: abs((400 * 0.05))})));&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="setup" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="adapt">
+      <CodeComponent name="pertrial">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="import * as math from 'math';&amp;#10;var arrow_x, arrow_y, arrowhyp, cur_change, cur_cond, cur_leftlength, cur_leftout, cur_length, cur_rightlength, degrees, leftendleft, leftendright, leftpos_x, rightendleft, rightendright, rightpos_x;&amp;#10;cur_cond = full_conditions[mainLoop.thisRepN];&amp;#10;cur_length = LineLength[mainLoop.thisRepN];&amp;#10;cur_change = condition_values[cur_cond][&quot;change&quot;];&amp;#10;cur_leftlength = (cur_length * (1 + cur_change));&amp;#10;cur_rightlength = cur_length;&amp;#10;cur_leftout = condition_values[cur_cond][&quot;leftout&quot;];&amp;#10;degrees = (cur_leftout * 45);&amp;#10;arrowhyp = Number.parseInt(Math.round(((cur_length / 4) * math.sqrt(2))));&amp;#10;arrow_y = Number.parseInt(Math.round((cur_length / 8)));&amp;#10;arrow_x = ((Number.parseInt(round((cur_length / 8))) * (- 1)) * cur_leftout);&amp;#10;leftpos_x = ((- (cur_leftlength / 2)) - horizDist);&amp;#10;rightpos_x = ((cur_rightlength / 2) + horizDist);&amp;#10;leftendleft = ((- cur_leftlength) - horizDist);&amp;#10;rightendleft = (- horizDist);&amp;#10;leftendright = horizDist;&amp;#10;rightendright = (cur_rightlength + horizDist);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="import math&amp;#10;&amp;#10;cur_cond = full_conditions[mainLoop.thisRepN]&amp;#10;&amp;#10;cur_length = LineLength[mainLoop.thisRepN]&amp;#10;&amp;#10;cur_change = condition_values[cur_cond]['change']&amp;#10;&amp;#10;cur_leftlength = cur_length * (1 + cur_change)&amp;#10;&amp;#10;cur_rightlength = cur_length&amp;#10;&amp;#10;cur_leftout = condition_values[cur_cond]['leftout'] &amp;#10;&amp;#10;degrees = cur_leftout * 45&amp;#10;&amp;#10;arrowhyp = int(round((cur_length/4)*(math.sqrt(2))))&amp;#10;&amp;#10;arrow_y = int(round(cur_length/8))&amp;#10;&amp;#10;arrow_x = int(round(cur_length/8)) * (-1) * cur_leftout&amp;#10;&amp;#10;leftpos_x = -(cur_leftlength/2) - horizDist&amp;#10;rightpos_x = (cur_rightlength/2) + horizDist&amp;#10;&amp;#10;leftendleft = -cur_leftlength - horizDist&amp;#10;rightendleft = -horizDist&amp;#10;leftendright = horizDist&amp;#10;rightendright = cur_rightlength + horizDist" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="pertrial" valType="code"/>
+      </CodeComponent>
+      <PolygonComponent name="LeftLine">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="LeftLine" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(leftpos_x, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(cur_leftlength, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="RightLine">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="RightLine" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(rightpos_x, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(cur_rightlength, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="LTL">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="LTL" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="set every repeat" val="0 + degrees" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(leftendleft+arrow_x, arrow_y)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(arrowhyp, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="LBL">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="LBL" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="set every repeat" val="0 - degrees" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(leftendleft+arrow_x, -arrow_y)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(arrowhyp, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="LTR">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="LTR" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="set every repeat" val="0 - degrees" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(rightendleft-arrow_x, arrow_y)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(arrowhyp, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="LBR">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="LBR" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="set every repeat" val="0 + degrees" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(rightendleft-arrow_x, -arrow_y)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(arrowhyp, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="RTL">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="RTL" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="set every repeat" val="0 - degrees" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(leftendright-arrow_x, arrow_y)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(arrowhyp, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="RBL">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="10" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="RBL" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="set every repeat" val="0 + degrees" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(leftendright-arrow_x, -arrow_y)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="line" valType="str"/>
+        <Param name="size" updates="set every repeat" val="(arrowhyp, 2)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="adaptsecs" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="instr"/>
+    <LoopInitiator loopType="TrialHandler" name="mainLoop">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="5" valType="code"/>
+      <Param name="name" updates="None" val="mainLoop" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="adapt"/>
+    <LoopTerminator name="mainLoop"/>
+    <Routine name="trial"/>
+  </Flow>
+</PsychoPy2experiment>
